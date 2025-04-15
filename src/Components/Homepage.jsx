@@ -535,7 +535,8 @@ const Touch = () => {
 
   return (
     <>
-      <div className='bg-[#ececec] p-[3.6%_0] touch-bg-container mt-4 my-0'>
+      <div className='bg-[#ececec] p-[3.6%_0] touch-bg-container mt-4 my-0'
+      style={{backgroundImage:`url(${contactBgImage})`}}>
         <section className='max-w-screensize mx-auto px-[15px]'>
           {/*  xl:float-left */}
           <div className='xl:ml-[33.3333%] xl:w-2/3 '>
