@@ -24,7 +24,7 @@ const Landing = () => {
   const CustomPrevArrow = ({ onClick }) => (
     <button
       onClick={onClick}
-      className="absolute left-5 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full z-10 hover:bg-gray-700"
+      className="absolute left-5 top-[35%] transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full z-10 hover:bg-gray-700"
     >
       <IoIosArrowBack size={24} />
     </button>
@@ -33,7 +33,7 @@ const Landing = () => {
   const CustomNextArrow = ({ onClick }) => (
     <button
       onClick={onClick}
-      className="absolute right-10 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full z-10 hover:bg-gray-700"
+      className="absolute right-10 top-[35%] transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full z-10 hover:bg-gray-700"
     >
       <IoIosArrowForward size={24} />
     </button>
@@ -134,7 +134,7 @@ const Welcome = () => {
 
                 <div class="relative flex flex-col md:flex-row gap-4 md:gap-1 items-center mt-[48px]">
                   <div class="relative md:mr-[28px]">
-                    <div class="relative block rounded-[10px] overflow-hidden max-w-[160px] w-full z-[1]" onClick={() => setVideoShow(!isVideoShow)}>
+                    <div class="relative block rounded-[10px] cursor-pointer overflow-hidden max-w-[160px] w-full z-[1]" onClick={() => setVideoShow(!isVideoShow)}>
                       <img src={videoBgImage} alt="" className='w-full align-middle' />
                       <div class="absolute inset-0 flex items-center justify-center">
                         <button target=" " className='video-mill'>

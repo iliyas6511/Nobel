@@ -132,12 +132,12 @@ const Header = () => {
     {
       id: 3,
       name: "About Us",
-      path: "/aboutus"
+      path: "/about-us"
     },
     {
       id: 4,
       name: "Contact",
-      path: "/contactus"
+      path: "/contact-us"
     },
     {
       id: 5,
