@@ -190,7 +190,7 @@ const Header = () => {
             
           </ul>
         </div>
-        <NavLink to={"/contactus"} type="button" className="group relative items-stretch justify-center p-0.5 text-center rounded-full font-bold xl:flex hidden
+        <NavLink to={"/contact-us"} type="button" className="group relative items-stretch justify-center p-0.5 text-center rounded-full font-bold xl:flex hidden
          bg-redprimary hover:bg-primaryemphasis text-white shadow-[0_4px_12px_rgba(255,75,75,0.6)]" >
 
           <span className="flex items-center gap-2 transition-all duration-150 justify-center rounded-md px-4 py-2 text-sm">
