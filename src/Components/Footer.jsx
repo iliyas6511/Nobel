@@ -2,6 +2,8 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa"
 import { FaLocationDot } from "react-icons/fa6"
 import { IoMail } from "react-icons/io5"
 
+import mlxmBigLogo from "../assets/Images/Logo_mahalaxmi.png"
+
 const Footer = () => {
 
     return (
@@ -12,7 +14,7 @@ const Footer = () => {
             <div className="flex flex-col ">
               <div className="max-w-[566px] mx-auto mb-[26px] flex flex-col md:flex-row ">
                 <div className="md:border-r border-[rgb(63,62,62)] md:pr-[30px] md:mr-[30px] float-left">
-                  <img src="src\assets\attachakii logo.png" className='max-w-full h-[55px] border-none aspect-auto' />
+                  <img src={mlxmBigLogo} className='max-w-full h-[70px] border-none aspect-auto' />
                 </div>
                 <div className="pt-[15px] pb-[15px] text-[16px] md:float-left flex items-center">
                   <i className="pr-[10px] inline-block text-[14px] leading-[1] text-[rgb(249,69,69)] font-normal">

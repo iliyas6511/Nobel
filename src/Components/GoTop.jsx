@@ -1,5 +1,6 @@
 import React from 'react'
 import { IoIosArrowUp } from 'react-icons/io'
+import getPrice from "../assets/Images/get-price-gif.gif"
 
 const GoTop = () => {
 
@@ -21,7 +22,7 @@ const GoTop = () => {
                 </div>
                 <div className="hidden md:block h-[39px] w-[199px] outline-none">
                     <a href="#" className='text-white no-underline outline-none'>
-                        <img src="src\assets\Images\get-price-gif.gif" />
+                        <img src={getPrice} />
                     </a>
                 </div>
             </div>
