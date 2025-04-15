@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+
+@keyframes ripple {
+    70% {
+        -webkit-box-shadow: 0 0 0 20px rgb(255, 255, 255, .2);
+        box-shadow: 0 0 0 20px rgb(255, 255, 255, .4);
+    }
+
+    100% {
+        -webkit-box-shadow: 0 0 0 0 rgb(255, 255, 255, 0);
+        box-shadow: 0 0 0 0 rgb(255, 255, 255, 0);
+    }
+
+}
+
+.video-mill ::before {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-animation-delay: .9s;
+    animation-delay: .9s;
+    content: "";
+    position: absolute;
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6);
+    -webkit-animation: ripple 3s infinite;
+    animation: ripple 3s infinite;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+
+}
+
+
+.touch-bg-container {
+    background: #ececec url(src/assets/Images/AI_mahalaxmi.png) left center no-repeat;
+    background-size: cover;
+
+}
+
+
+/* products page Css */
+
+
+@media (min-width: 768px) {
+    .options-container> :not(:last-child) {
+        margin-right: 80px;
+    }
+}
+
+@media (max-width: 767px) {
+    .options-container> :not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+.profile-options::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 0;
+    bottom: 0px;
+    height: 4px;
+    opacity: 0;
+    transform: translateX(-50%);
+    background: rgb(208, 20, 33);
+    transition: inherit;
+    border-radius: 3px 3px 0px 0px;
+}
+
+.profile-options.activeoption::before {
+    width: 100%;
+    opacity: 1;
+}
+
+.custom-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #28a745;
+    /* Green */
+
+    transition: right 0.4s ease-in-out;
+    z-index: 0;
+}
+
+.custom-button:hover::before {
+    right: 0;
+
+}
+
+
+/* aboutus Slider */
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling on iOS */
+    scrollbar-width: none;
+    /* Hide scrollbar in Firefox */
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar in Chrome/Safari */
+}
+
+.slide {
+    flex: 0 0 100%;
+    /* Each slide takes full width */
+    min-width: 100%;
+    /* Ensure slides are full width */
+    box-sizing: border-box;
+}
