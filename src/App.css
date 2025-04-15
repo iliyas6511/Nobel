@@ -40,7 +40,7 @@
 
 
 .touch-bg-container {
-    background: #ececec url("src/assets/Images/AI_mahalaxmi.png") left center no-repeat;
+    background: #ececec url('src/assets/Images/AI_mahalaxmi.png') left center no-repeat;
     background-size: cover;
 
 }
