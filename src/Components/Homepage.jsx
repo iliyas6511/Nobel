@@ -57,7 +57,7 @@ const Landing = () => {
             <img
               src={src}
               alt={`Slide ${index + 1}`}
-              className="w-full h-full object-contain object-cente "
+              className="w-full h-full object-cover object-cente "
             />
             <div className="absolute right-10 bottom-10 bg-white p-6 rounded-lg shadow-lg max-w-sm">
               <h2 className="text-xl font-bold mb-2">Slide {index + 1}</h2>
