@@ -72,6 +72,9 @@ const Landing = () => {
 }
 
 import welcomeImage from "../assets/Images/home_advertise.jpg"
+import videoBgImage from "../assets/Images/about image.jpg"
+import panati from "../assets/Images/panati.png"
+
 
 const Welcome = () => {
 
@@ -104,7 +107,7 @@ const Welcome = () => {
 
                 <div className='sec-title relative block mt-[-7px] mb-[30px] md:mb-[50px]'>
                   <div className='relative block mb-[5px] md:mb-[20px]'>
-                    <img src="https://www.ajantamanufacturers.in/assets/images/resources/sec-title-icon1.png" alt="" />
+                    <img src={panati} alt="l" />
 
                   </div>
 
@@ -132,7 +135,7 @@ const Welcome = () => {
                 <div class="relative flex flex-col md:flex-row gap-4 md:gap-1 items-center mt-[48px]">
                   <div class="relative md:mr-[28px]">
                     <div class="relative block rounded-[10px] overflow-hidden max-w-[160px] w-full z-[1]" onClick={() => setVideoShow(!isVideoShow)}>
-                      <img src="https://www.ajantamanufacturers.in/assets/images/resources/about-v1-video-img.jpg" alt="" className='w-full align-middle' />
+                      <img src={videoBgImage} alt="" className='w-full align-middle' />
                       <div class="absolute inset-0 flex items-center justify-center">
                         <button target=" " className='video-mill'>
                           <span class="icon-play-button-1 ">
