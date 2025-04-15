@@ -243,7 +243,7 @@ const Header = () => {
                 </>
               ))}
             </ul>
-            <NavLink to={"/contactus"} type="button" className="group relative flex items-stretch justify-center p-0.5 text-center rounded-lg font-bold w-full mt-6" >
+            <NavLink to={"/contact-us"} type="button" className="group relative flex items-stretch justify-center p-0.5 text-center rounded-lg font-bold w-full mt-6" >
               <span className="flex items-center gap-2 transition-all duration-150 justify-center rounded-md px-4 py-2 text-gray-400 text-sm">Send Enquiry</span>
               </NavLink>
           </div>
