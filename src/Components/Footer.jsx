@@ -12,7 +12,7 @@ const Footer = () => {
           <section className='max-w-screensize mx-auto py-[30px] text-center text-[#acacac]'>
   
             <div className="flex flex-col ">
-              <div className="max-w-[566px] mx-auto mb-[26px] flex flex-col md:flex-row ">
+              <div className="max-w-[566px] mx-auto mb-[26px] flex flex-col items-center md:flex-row ">
                 <div className="md:border-r border-[rgb(63,62,62)] md:pr-[30px] md:mr-[30px] float-left">
                   <img src={mlxmBigLogo} className='max-w-full h-[70px] border-none aspect-auto' />
                 </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { IoIosArrowUp } from 'react-icons/io'
 import getPrice from "../assets/Images/get-price-gif.gif"
+import { NavLink } from 'react-router-dom';
 
 const GoTop = () => {
 
@@ -21,9 +22,10 @@ const GoTop = () => {
                     <span className='flex items-center justify-center w-full h-full'><IoIosArrowUp className='text-[24px]'/></span>
                 </div>
                 <div className="hidden md:block h-[39px] w-[199px] outline-none">
-                    <a href="#" className='text-white no-underline outline-none'>
+                    <NavLink to="/contact-us#contact-form" 
+                    className='text-white no-underline outline-none'>
                         <img src={getPrice} />
-                    </a>
+                    </NavLink>
                 </div>
             </div>
         

@@ -3,20 +3,24 @@
 
 @theme {
 
-    --spacing-screensize:1280px;
+    --spacing-screensize: 1280px;
 
-    --color-blackText:rgb(14,10,8);
-    --color-redprimary:rgb(208,20,33);
-    --color-redSecondary:#f94545;
-    --color-redtertiary:rgb(233,54,62);
-    --color-stdprimary:#00a1ff;
-    --color-stdlightprimary:#00a1ff20;
-    --color-grayFirst:#9e9e9e;
-    --color-lightGray:#eef2f6;
+    --color-blackText: rgb(14, 10, 8);
+    --color-redprimary: rgb(208, 20, 33);
+    --color-redSecondary: #f94545;
+    --color-redtertiary: rgb(233, 54, 62);
+    --color-stdprimary: #00a1ff;
+    --color-stdlightprimary: #00a1ff20;
+    --color-grayFirst: #9e9e9e;
+    --color-lightGray: #eef2f6;
     --color-miniBorder: rgb(235, 241, 245);
-    --color-darkGreen:#6d8c54;
-    --color-lightGreen:#687469;
-    --color-detailGreen:#334b35;
-    --color-golden:rgb(241,207,105);
+    --color-darkGreen: #6d8c54;
+    --color-lightGreen: #687469;
+    --color-detailGreen: #334b35;
+    --color-golden: rgb(241, 207, 105);
 
+}
+
+html {
+    scroll-behavior: smooth;
 }

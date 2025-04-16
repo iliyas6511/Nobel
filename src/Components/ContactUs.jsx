@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { CiMap } from 'react-icons/ci'
 import { FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 import { GiRotaryPhone } from 'react-icons/gi'
 import { MdFacebook, MdOutlineMail } from 'react-icons/md'
 import { TiSocialTwitter } from 'react-icons/ti'
 import Topcard from './TopCard'
+import { useLocation } from 'react-router-dom'
 
 // const Topcard = () => {
 
@@ -267,10 +268,23 @@ const LocationComp = () => {
 }
 
 const ContactUs = () => {
+    const contactFormRef = useRef(null); // Create ref for ContactForm
+    const location = useLocation();
+
+    // Scroll to ContactForm if URL has #contact-form
+    useEffect(() => {
+        if (location.hash === "#contact-form" && contactFormRef.current) {
+            contactFormRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+    }, [location.hash]);
+
+
     return (
         <>
             <Topcard />
-            <ContactForm />
+            <div ref={contactFormRef} id='contact-form'>
+                <ContactForm />
+            </div>
             <Address />
             <LocationComp />
 

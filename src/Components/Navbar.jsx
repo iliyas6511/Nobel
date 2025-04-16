@@ -94,7 +94,7 @@ import { useEffect, useRef, useState } from "react";
 import { CiMenuBurger } from "react-icons/ci";
 import { MdOutlineMail } from "react-icons/md";
 import { RxCross1 } from "react-icons/rx";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import mlxmBigLogo from "../assets/Images/Logo_mahalaxmi.png"
 import mlxmSmallLogo from "../assets/Images/logo-retail.png"
 const Header = () => {
@@ -110,6 +110,13 @@ const Header = () => {
       setSidebarOpen(false);
     }
   };
+
+  const location = useLocation(); // Hook to track route changes
+
+  // Close sidebar when route changes
+  useEffect(() => {
+    setSidebarOpen(false); // Close sidebar on route change
+  }, [location.pathname]); // Trigger when pathname changes
 
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
@@ -165,6 +172,10 @@ const Header = () => {
     };
   }, []);
 
+  const handleSendEnquiryClick = () => {
+    setSidebarOpen(false);
+  };
+
   return (
     <header className={`sticky top-0 z-50 bg-white  lg:py-9 py-5 w-full transition-shadow duration-500 ${isScrolled ? " shadow-[0_0_12px_5px_rgba(255,75,75,0.3)]" : "shadow-none"}`}>
       <div className="max-w-screensize py-0 px-[20px] mx-auto flex justify-between items-center">
@@ -187,10 +198,10 @@ const Header = () => {
                 </NavLink>
               </li>
             ))}
-            
+
           </ul>
         </div>
-        <NavLink to={"/contact-us"} type="button" className="group relative items-stretch justify-center p-0.5 text-center rounded-full font-bold xl:flex hidden
+        <NavLink to={"/contact-us#contact-form"} type="button" className="group relative items-stretch justify-center p-0.5 text-center rounded-full font-bold xl:flex hidden
          bg-redprimary hover:bg-primaryemphasis text-white shadow-[0_4px_12px_rgba(255,75,75,0.6)]" >
 
           <span className="flex items-center gap-2 transition-all duration-150 justify-center rounded-md px-4 py-2 text-sm">
@@ -243,9 +254,11 @@ const Header = () => {
                 </>
               ))}
             </ul>
-            <NavLink to={"/contact-us"} type="button" className="group relative flex items-stretch justify-center p-0.5 text-center rounded-lg font-bold w-full mt-6" >
-              <span className="flex items-center gap-2 transition-all duration-150 justify-center rounded-md px-4 py-2 text-gray-400 text-sm">Send Enquiry</span>
-              </NavLink>
+            <NavLink to={"/contact-us#contact-form"} type="button"
+              onClick={handleSendEnquiryClick}
+              className="group relative flex items-stretch justify-center p-0.5 text-center rounded-lg font-bold w-full mt-6" >
+              <span className="flex items-center gap-2 transition-all duration-150 justify-center rounded-md px-4 py-2 bg-red-500 text-white text-sm">Send Enquiry</span>
+            </NavLink>
           </div>
         </div>
       </div>
